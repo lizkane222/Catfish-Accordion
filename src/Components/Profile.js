@@ -1,15 +1,17 @@
-import '../Styles/Profile.css';
+// EXTERNAL IMPORTS
 // bring in React from React
-import React from 'react'
-import {profileData} from "../Data/profileData"
+import React from 'react';
+// INTERNAL IMPORTS
+import '../Styles/Profile.css';
+import {profileData} from "../Data/profileData";
 
 
 
 // define our functional component
 function Profile(props) {
-    let pd = profileData
+    let pd = props.profileData
 
-    let thisYear = 2021
+    let thisYear = props.thisYear
     let birthYear = thisYear- pd.age
 
     return (

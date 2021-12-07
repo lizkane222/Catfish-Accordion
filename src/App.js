@@ -4,8 +4,9 @@
 import React from 'react'
 
 // INTERNAL IMPORTS
-import Welcome from "./Welcome"
-import Profile from "./Profile"
+import Welcome from "./Components/Welcome"
+import ProfileList from "./Components/ProfileList"
+import Nav from "./Components/Nav"
 
 let createdAt = Date.now()
 let updatedAt = Date.now()
@@ -40,20 +41,10 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Catfish Accordion -- <code>PTIGA</code> 
-        </p>
-        <a
-          className="App-link"
-          href="https://app.segment.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Segment
-        </a>
+        <Nav />
         <Welcome name={"Liz"} date={props.date}/>
       </header>
-      <Profile createdAt={createdAt} updatedAt={updatedAt} date={today} profile={profile}/>
+      <ProfileList createdAt={createdAt} updatedAt={updatedAt} date={today} profile={profile}/>
     </div>
   );
 }
